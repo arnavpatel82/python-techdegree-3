@@ -10,7 +10,7 @@ class Phrase:
         for num in range(len(listified_phrase)):
             if listified_phrase[num] not in guesses_list and listified_phrase[num] != ' ':
                 listified_phrase[num] = '_'
-        return (''.join(listified_phrase))
+        return (' '.join(listified_phrase))
         
     def check_letter(self, letter):
         return letter in self.phrase

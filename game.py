@@ -39,8 +39,10 @@ class Game:
     
     def game_over(self, win):
         if win:
+            print()
             print("Congratulations you won!")
         else:
+            print()
             print("Game over! Better luck next time!")
 
     def start(self):
@@ -49,6 +51,7 @@ class Game:
         phrase = self.get_random_phrase()
         game_won_yet = False
         while self.missed < 5 and not game_won_yet:
+            print()
             print(f'Number missed: {self.missed}')
             print(phrase.display(self.guesses))
             guess = self.get_guess()
