@@ -18,7 +18,7 @@ class Phrase:
     def check_complete(self, guesses_list):
         phrase_as_set = set(self.phrase)
         phrase_as_set.discard(' ')
-        return phrase_as_set == set(guesses_list)
+        return phrase_as_set.issubset(set(guesses_list)) or phrase_as_set == set(guesses_list)
 
 
 if __name__ == "__main__":
